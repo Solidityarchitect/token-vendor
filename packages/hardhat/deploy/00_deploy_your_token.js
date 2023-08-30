@@ -1,6 +1,8 @@
 // deploy/00_deploy_your_contract.js
 
 const { ethers } = require("hardhat");
+require("dotenv").config()
+const { verify } = require("../utils/verify")
 
 module.exports = async ({ getNamedAccounts, deployments, getChainId }) => {
   const { deploy } = deployments;
@@ -57,6 +59,9 @@ module.exports = async ({ getNamedAccounts, deployments, getChainId }) => {
   //     console.log(" ⚠️ Failed to verify contract on Etherscan ");
   //   }
   // }
+  if (chainId === 11155111 && process.env.ETHERSCAN_API_KEY) {
+    await verify(yourToken.address, [])
+}
 };
 
 function sleep(ms) {
