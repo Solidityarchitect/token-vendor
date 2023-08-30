@@ -18,3 +18,5 @@ Vendor Contract
 CODE: https://sepolia.etherscan.io/address/0xae15E5ab4171745267ED2B86718D6671f4ced739
 
 DEMO: https://absorbed-celery.surge.sh/
+
+🏗  Smart Contract deploy on Ethereum sepolia Testnet  🏗
